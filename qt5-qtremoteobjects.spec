@@ -70,6 +70,7 @@ Summary(pl.UTF-8):	Biblioteka Qt5 RemoteObjects - pliki programistyczne
 Group:		X11/Development/Libraries
 Requires:	Qt5Core-devel >= %{qtbase_ver}
 Requires:	Qt5Network-devel >= %{qtbase_ver}
+Requires:	Qt5RemoteObjects = %{version}-%{release}
 
 %description -n Qt5RemoteObjects-devel
 Qt5 RemoteObjects - development files.
