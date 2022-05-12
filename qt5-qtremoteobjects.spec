@@ -9,12 +9,12 @@
 Summary:	The Qt5 RemoteObjects library
 Summary(pl.UTF-8):	Biblioteka Qt5 RemoteObjects
 Name:		qt5-%{orgname}
-Version:	5.15.2
-Release:	2
+Version:	5.15.4
+Release:	1
 License:	LGPL v3 or GPL v2+ or commercial
 Group:		X11/Libraries
-Source0:	https://download.qt.io/official_releases/qt/5.15/%{version}/submodules/%{orgname}-everywhere-src-%{version}.tar.xz
-# Source0-md5:	32d7814c5fda435891bce37f0fb5a1da
+Source0:	https://download.qt.io/official_releases/qt/5.15/%{version}/submodules/%{orgname}-everywhere-opensource-src-%{version}.tar.xz
+# Source0-md5:	8f1d4530535e8a7aae7391906895f479
 URL:		https://www.qt.io/
 BuildRequires:	Qt5Core-devel >= %{qtbase_ver}
 BuildRequires:	Qt5Network-devel >= %{qtbase_ver}
@@ -140,12 +140,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/libQt5*.so.5.??
 # obsoleted by pkg-config; Qt5RepParser.la is bogus (header only library)
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
-
-# remove compiled examples (package only sources)
-for d in $RPM_BUILD_ROOT%{_examplesdir}/qt5/remoteobjects/* ; do
-	[ -d "$d" -a -x "$d/$(basename $d)" ] && %{__rm} "$d/$(basename $d)"
-done
-%{__rm} $RPM_BUILD_ROOT%{_examplesdir}/qt5/remoteobjects/cppclient/CppClient
 
 %clean
 rm -rf $RPM_BUILD_ROOT
