@@ -9,12 +9,12 @@
 Summary:	The Qt5 RemoteObjects library
 Summary(pl.UTF-8):	Biblioteka Qt5 RemoteObjects
 Name:		qt5-%{orgname}
-Version:	5.15.10
+Version:	5.15.11
 Release:	1
 License:	LGPL v3 or GPL v2+ or commercial
 Group:		X11/Libraries
 Source0:	https://download.qt.io/official_releases/qt/5.15/%{version}/submodules/%{orgname}-everywhere-opensource-src-%{version}.tar.xz
-# Source0-md5:	61245722d3816c86f3e9143a97a35517
+# Source0-md5:	958310f34056cce6efeff066fbbf8676
 URL:		https://www.qt.io/
 BuildRequires:	Qt5Core-devel >= %{qtbase_ver}
 BuildRequires:	Qt5Network-devel >= %{qtbase_ver}
